@@ -6,7 +6,7 @@
 
         public virtual Task<Solution> SolvePart1Async(InputType inputType)
         {
-            Console.WriteLine("TODO: Implement Solution Part2");
+            Console.WriteLine("TODO: Implement Solution Part1");
             return Task.FromResult(new Solution("TODO"));
         }
 
