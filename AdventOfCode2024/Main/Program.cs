@@ -7,7 +7,7 @@ namespace Main
     {
         static async Task Main(string[] args)
         {
-            var day = Day.One;
+            var day = Day.Two;
             var inputType = InputType.Puzzle;
             var challengePart = ChallengePart.Two;
             var challenge = Challenges.First(c => c.Day == day);
