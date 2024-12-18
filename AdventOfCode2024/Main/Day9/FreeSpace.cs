@@ -36,7 +36,7 @@
 
         public override long[] GetBlocks()
         {
-            return _fileBlocksAdded.ToArray();
+            return _fileBlocksAdded.Concat(Enumerable.Range(0, RemainingSize).Select(x => 0L)).ToArray();
         }
     }
 }

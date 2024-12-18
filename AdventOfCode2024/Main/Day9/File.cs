@@ -37,7 +37,9 @@
         public override long[] GetBlocks()
         {
             var remainingUnmovedBlocks = Size - _blocksMoved;
-            return Enumerable.Range(0, remainingUnmovedBlocks).Select(x => (long)Id).ToArray();
+            var unMovedBlocks = Enumerable.Range(0, remainingUnmovedBlocks).Select(x => (long)Id);
+            var newFreeSpace = Enumerable.Range(0, _blocksMoved).Select(x => 0L);
+            return unMovedBlocks.Concat(newFreeSpace).ToArray();
         }
     }
 }
